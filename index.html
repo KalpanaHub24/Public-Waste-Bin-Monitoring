@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bin Watch — Public Waste Bin Fill Monitoring</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">&#9737;</span>
+        <div>
+          <h1>Bin Watch</h1>
+          <p class="tagline">Public waste bin fill monitoring &amp; collection planning</p>
+        </div>
+      </div>
+      <div class="topbar-meta">
+        <span id="last-updated">—</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ============ LIST VIEW ============ -->
+    <section id="list-view" class="view">
+
+      <div class="controls">
+        <div class="search-wrap">
+          <label for="search-input" class="visually-hidden">Search by bin ID or ward</label>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Search bin ID or ward…"
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="filter-wrap">
+          <label for="ward-filter">Ward</label>
+          <select id="ward-filter">
+            <option value="">All wards</option>
+          </select>
+        </div>
+
+        <div class="filter-wrap">
+          <label for="status-filter">Status</label>
+          <select id="status-filter">
+            <option value="">All statuses</option>
+            <option value="ok">OK (&lt; 60%)</option>
+            <option value="warning">Filling up (60–84%)</option>
+            <option value="critical">Needs collection (85%+)</option>
+            <option value="flagged">Flagged reading</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="result-count" class="result-count" role="status" aria-live="polite">
+        Showing 0 of 0 records
+      </p>
+
+      <!-- state placeholders -->
+      <p id="loading-state" class="state-msg">Loading bin readings…</p>
+      <p id="empty-state" class="state-msg" hidden>No readings match your search or filters.</p>
+      <p id="error-state" class="state-msg state-error" hidden>
+        Couldn't load bin data. Check that <code>data.json</code> is present, then reload the page.
+      </p>
+
+      <div class="table-wrap" hidden id="table-wrap">
+        <table id="bins-table">
+          <thead>
+            <tr>
+              <th scope="col">Bin</th>
+              <th scope="col">Ward</th>
+              <th scope="col">Fill level</th>
+              <th scope="col">Recorded at</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody id="bins-tbody">
+            <!-- rows injected by script.js -->
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <!-- ============ DETAIL VIEW ============ -->
+    <section id="detail-view" class="view" hidden>
+      <button id="back-btn" class="back-btn" type="button">&larr; Back to list</button>
+
+      <div id="detail-content">
+        <!-- injected by script.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Bin Watch — SIH 2026 Practical Assessment · Data refreshes from <code>data.json</code></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

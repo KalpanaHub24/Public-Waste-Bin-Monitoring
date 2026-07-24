@@ -1,0 +1,338 @@
+[
+  {
+    "reading_id": "R001",
+    "bin_id": "BIN001",
+    "ward": "Ward 1",
+    "fill_pct": 21,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-20 16:00"
+  },
+  {
+    "reading_id": "R002",
+    "bin_id": "BIN001",
+    "ward": "Ward 1",
+    "fill_pct": 26,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-21 01:00"
+  },
+  {
+    "reading_id": "R003",
+    "bin_id": "BIN001",
+    "ward": "Ward 1",
+    "fill_pct": 44,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-21 09:00"
+  },
+  {
+    "reading_id": "R004",
+    "bin_id": "BIN002",
+    "ward": "Ward 1",
+    "fill_pct": 33,
+    "last_emptied": "2026-07-22 08:00",
+    "recorded_at": "2026-07-22 18:00"
+  },
+  {
+    "reading_id": "R005",
+    "bin_id": "BIN002",
+    "ward": "Ward 1",
+    "fill_pct": 51,
+    "last_emptied": "2026-07-22 08:00",
+    "recorded_at": "2026-07-23 01:00"
+  },
+  {
+    "reading_id": "R006",
+    "bin_id": "BIN002",
+    "ward": "Ward 1",
+    "fill_pct": 64,
+    "last_emptied": "2026-07-22 08:00",
+    "recorded_at": "2026-07-23 10:00"
+  },
+  {
+    "reading_id": "R007",
+    "bin_id": "BIN002",
+    "ward": "Ward 1",
+    "fill_pct": 75,
+    "last_emptied": "2026-07-22 08:00",
+    "recorded_at": "2026-07-23 17:00"
+  },
+  {
+    "reading_id": "R008",
+    "bin_id": "BIN003",
+    "ward": "Ward 3",
+    "fill_pct": 20,
+    "last_emptied": "2026-07-21 08:00",
+    "recorded_at": "2026-07-21 19:00"
+  },
+  {
+    "reading_id": "R009",
+    "bin_id": "BIN003",
+    "ward": "Ward 3",
+    "fill_pct": 36,
+    "last_emptied": "2026-07-21 08:00",
+    "recorded_at": "2026-07-22 02:00"
+  },
+  {
+    "reading_id": "R010",
+    "bin_id": "BIN003",
+    "ward": "Ward 3",
+    "fill_pct": 42,
+    "last_emptied": "2026-07-21 08:00",
+    "recorded_at": "2026-07-22 10:00"
+  },
+  {
+    "reading_id": "R011",
+    "bin_id": "BIN004",
+    "ward": "Ward 2",
+    "fill_pct": 44,
+    "last_emptied": "2026-07-18 08:00",
+    "recorded_at": "2026-07-18 16:00"
+  },
+  {
+    "reading_id": "R012",
+    "bin_id": "BIN004",
+    "ward": "Ward 2",
+    "fill_pct": 58,
+    "last_emptied": "2026-07-18 08:00",
+    "recorded_at": "2026-07-19 00:00"
+  },
+  {
+    "reading_id": "R013",
+    "bin_id": "BIN004",
+    "ward": "Ward 2",
+    "fill_pct": 69,
+    "last_emptied": "2026-07-18 08:00",
+    "recorded_at": "2026-07-19 10:00"
+  },
+  {
+    "reading_id": "R014",
+    "bin_id": "BIN004",
+    "ward": "Ward 2",
+    "fill_pct": 75,
+    "last_emptied": "2026-07-18 08:00",
+    "recorded_at": "2026-07-19 16:00"
+  },
+  {
+    "reading_id": "R015",
+    "bin_id": "BIN005",
+    "ward": "Ward 2",
+    "fill_pct": 41,
+    "last_emptied": "2026-07-18 08:00",
+    "recorded_at": "2026-07-18 18:00"
+  },
+  {
+    "reading_id": "R016",
+    "bin_id": "BIN005",
+    "ward": "Ward 2",
+    "fill_pct": 49,
+    "last_emptied": "2026-07-18 08:00",
+    "recorded_at": "2026-07-19 01:00"
+  },
+  {
+    "reading_id": "R017",
+    "bin_id": "BIN005",
+    "ward": "Ward 2",
+    "fill_pct": 62,
+    "last_emptied": "2026-07-18 08:00",
+    "recorded_at": "2026-07-19 11:00"
+  },
+  {
+    "reading_id": "R018",
+    "bin_id": "BIN006",
+    "ward": "Ward 2",
+    "fill_pct": 31,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-20 18:00"
+  },
+  {
+    "reading_id": "R019",
+    "bin_id": "BIN006",
+    "ward": "Ward 2",
+    "fill_pct": 44,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-21 01:00"
+  },
+  {
+    "reading_id": "R020",
+    "bin_id": "BIN006",
+    "ward": "Ward 2",
+    "fill_pct": 54,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-21 08:00"
+  },
+  {
+    "reading_id": "R021",
+    "bin_id": "BIN006",
+    "ward": "Ward 2",
+    "fill_pct": 64,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-21 17:00"
+  },
+  {
+    "reading_id": "R022",
+    "bin_id": "BIN007",
+    "ward": "Ward 1",
+    "fill_pct": 33,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-20 17:00"
+  },
+  {
+    "reading_id": "R023",
+    "bin_id": "BIN007",
+    "ward": "Ward 1",
+    "fill_pct": 45,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-21 00:00"
+  },
+  {
+    "reading_id": "R024",
+    "bin_id": "BIN007",
+    "ward": "Ward 1",
+    "fill_pct": 60,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-21 08:00"
+  },
+  {
+    "reading_id": "R025",
+    "bin_id": "BIN007",
+    "ward": "Ward 1",
+    "fill_pct": 73,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-21 19:00"
+  },
+  {
+    "reading_id": "R026",
+    "bin_id": "BIN008",
+    "ward": "Ward 5",
+    "fill_pct": 50,
+    "last_emptied": "2026-07-23 08:00",
+    "recorded_at": "2026-07-23 18:00"
+  },
+  {
+    "reading_id": "R027",
+    "bin_id": "BIN008",
+    "ward": "Ward 5",
+    "fill_pct": 67,
+    "last_emptied": "2026-07-23 08:00",
+    "recorded_at": "2026-07-24 03:00"
+  },
+  {
+    "reading_id": "R028",
+    "bin_id": "BIN008",
+    "ward": "Ward 5",
+    "fill_pct": 76,
+    "last_emptied": "2026-07-23 08:00",
+    "recorded_at": "2026-07-24 11:00"
+  },
+  {
+    "reading_id": "R029",
+    "bin_id": "BIN009",
+    "ward": "Ward 1",
+    "fill_pct": 35,
+    "last_emptied": "2026-07-21 08:00",
+    "recorded_at": "2026-07-21 18:00"
+  },
+  {
+    "reading_id": "R030",
+    "bin_id": "BIN009",
+    "ward": "Ward 1",
+    "fill_pct": 51,
+    "last_emptied": "2026-07-21 08:00",
+    "recorded_at": "2026-07-22 03:00"
+  },
+  {
+    "reading_id": "R031",
+    "bin_id": "BIN009",
+    "ward": "Ward 1",
+    "fill_pct": 60,
+    "last_emptied": "2026-07-21 08:00",
+    "recorded_at": "2026-07-22 09:00"
+  },
+  {
+    "reading_id": "R032",
+    "bin_id": "BIN010",
+    "ward": "Ward 5",
+    "fill_pct": 20,
+    "last_emptied": "2026-07-19 08:00",
+    "recorded_at": "2026-07-19 16:00"
+  },
+  {
+    "reading_id": "R033",
+    "bin_id": "BIN010",
+    "ward": "Ward 5",
+    "fill_pct": 30,
+    "last_emptied": "2026-07-19 08:00",
+    "recorded_at": "2026-07-20 01:00"
+  },
+  {
+    "reading_id": "R034",
+    "bin_id": "BIN010",
+    "ward": "Ward 5",
+    "fill_pct": 37,
+    "last_emptied": "2026-07-19 08:00",
+    "recorded_at": "2026-07-20 11:00"
+  },
+  {
+    "reading_id": "R035",
+    "bin_id": "BIN010",
+    "ward": "Ward 5",
+    "fill_pct": 54,
+    "last_emptied": "2026-07-19 08:00",
+    "recorded_at": "2026-07-20 19:00"
+  },
+  {
+    "reading_id": "R036",
+    "bin_id": "BIN004",
+    "ward": "Ward 2",
+    "fill_pct": null,
+    "last_emptied": "2026-07-19 09:00",
+    "recorded_at": "2026-07-24 07:40"
+  },
+  {
+    "reading_id": "R037",
+    "bin_id": "BIN007",
+    "ward": "Ward 1",
+    "fill_pct": 178,
+    "last_emptied": "2026-07-21 10:00",
+    "recorded_at": "2026-07-24 07:55"
+  },
+  {
+    "reading_id": "R038",
+    "bin_id": "BIN009",
+    "ward": "Ward 1",
+    "fill_pct": 50,
+    "last_emptied": "2026-07-17 09:00",
+    "recorded_at": "2026-07-23 08:00"
+  },
+  {
+    "reading_id": "R039",
+    "bin_id": "BIN009",
+    "ward": "Ward 1",
+    "fill_pct": 50,
+    "last_emptied": "2026-07-17 09:00",
+    "recorded_at": "2026-07-23 14:00"
+  },
+  {
+    "reading_id": "R040",
+    "bin_id": "BIN009",
+    "ward": "Ward 1",
+    "fill_pct": 50,
+    "last_emptied": "2026-07-17 09:00",
+    "recorded_at": "2026-07-23 20:00"
+  },
+  {
+    "reading_id": "R041",
+    "bin_id": "BIN009",
+    "ward": "Ward 1",
+    "fill_pct": 50,
+    "last_emptied": "2026-07-17 09:00",
+    "recorded_at": "2026-07-24 02:00"
+  },
+  {
+    "reading_id": "R042",
+    "bin_id": "BIN010",
+    "ward": "Ward 5",
+    "fill_pct": 37,
+    "last_emptied": "2026-07-20 08:00",
+    "recorded_at": "2026-07-21 04:00"
+  }
+]
