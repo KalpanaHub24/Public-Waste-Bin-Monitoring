@@ -5,7 +5,7 @@ these are the exact checks the assessment asks for, with the expected
 result noted so you know what "correct" looks like.
 
 ## 1. End-to-end main flow
-- [x ] Open `index.html`. List loads within ~1 second, count reads
+- [ ] Open `index.html`. List loads within ~1 second, count reads
       "Showing 42 of 42 records".
 - [ ] Type a bin ID (e.g. `BIN004`) into search → list narrows live,
       count updates, no button press needed.
