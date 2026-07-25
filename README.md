@@ -74,6 +74,5 @@ waste-bin-dashboard/
   over Wi-Fi (NTP) instead.
 - No authentication/login — out of scope for an Easy-level assessment.
 
-## Screenshots & demo video
-_(Add 3–4 screenshots of the running dashboard here, plus a link to your
-short demo video, before submitting.)_
+## Demo video
+https://drive.google.com/file/d/1gwbq8dkx_6G2M1as9R-lS2o2HPq2z5kg/view?usp=drive_link
