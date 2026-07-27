@@ -36,13 +36,23 @@ Math.floor((today - last_emptied_date) / (1000 * 60 * 60 * 24))
 This is the number a sanitation supervisor cares about most — a bin that's
 both high-fill *and* long-unemptied is the one to send a truck to first.
 
+## Level 2 — On-spot changes
+Two changes were made live during the SIH 2026 Level 2 on-spot exam.
+Full before/after details, reasoning, and how to demo each one are in
+[`ONSPOT-CHANGES.md`](ONSPOT-CHANGES.md):
+1. **Threshold change** — the "needs collection" threshold moved from 85%
+   to 75%, controlled by one constant (`CRITICAL_THRESHOLD` in `script.js`).
+2. **Broken sensor handling** — fixed a bug where an impossible reading
+   (e.g. 250%) sorted to the *top* of the list as the "most urgent" bin;
+   it now sorts to the bottom and is shown as a flagged fault instead.
+
 ## Project structure
 ```
 waste-bin-dashboard/
 ├── index.html              # list view + detail view + all UI states
 ├── style.css                # styling (traffic-light fill gauge is the signature element)
 ├── script.js                 # data loading, search/filter, detail rendering
-├── data.json                  # 42 readings the dashboard actually loads
+├── data.json                  # 43 readings the dashboard actually loads
 ├── data/
 │   ├── bins.csv                # same dataset in CSV form (Task 1 source)
 │   └── data-dictionary.md      # field-by-field explanation + awkward cases
@@ -50,6 +60,7 @@ waste-bin-dashboard/
 │   ├── sketch.ino               # ESP32 simulation (Task 4)
 │   └── diagram.json             # virtual wiring for Wokwi
 ├── TEST-LOG.md                 # Task 5 test results
+├── ONSPOT-CHANGES.md           # Level 2 on-spot exam changes, before/after
 └── README.md                    # this file
 ```
 
@@ -74,5 +85,6 @@ waste-bin-dashboard/
   over Wi-Fi (NTP) instead.
 - No authentication/login — out of scope for an Easy-level assessment.
 
-## Demo video
-https://drive.google.com/file/d/1gwbq8dkx_6G2M1as9R-lS2o2HPq2z5kg/view?usp=drive_link
+## Screenshots & demo video
+_(Add 3–4 screenshots of the running dashboard here, plus a link to your
+short demo video, before submitting.)_

@@ -29,6 +29,20 @@ and the sensing logic have real edge cases to handle instead of only clean data:
    readings change normally. A real bin's fill level does not stay perfectly
    flat for that long — this is what a stuck sensor looks like, and it's the
    case the smoothing/plausibility logic in Task 4 is built to catch.
+4. **Second out-of-range value (added for the Level 2 on-spot exam)** — row
+   `reading_id = R043`, `bin_id = BIN010`, `fill_pct = 250`. A second, more
+   extreme impossible value used to demonstrate that a broken-sensor reading
+   is treated as a fault and sorted to the bottom of the list, not mistaken
+   for the most urgent bin. See `ONSPOT-CHANGES.md` for the full walkthrough.
+
+## Status thresholds (used by `script.js`)
+
+| Status | Condition | Notes |
+|---|---|---|
+| OK | `fill_pct < 60` | green |
+| Filling up | `60 ≤ fill_pct < 75` | amber |
+| Needs collection | `fill_pct ≥ 75` | red — **changed from 85% during the Level 2 on-spot exam**, see `ONSPOT-CHANGES.md` |
+| Flagged | `fill_pct` missing, or outside `0`–`100` | purple — treated as a sensor fault, never as a real measurement |
 
 ## Derived figure shown on the Detail view
 

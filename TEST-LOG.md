@@ -6,7 +6,7 @@ result noted so you know what "correct" looks like.
 
 ## 1. End-to-end main flow
 - [ ] Open `index.html`. List loads within ~1 second, count reads
-      "Showing 42 of 42 records".
+      "Showing 43 of 43 records".
 - [ ] Type a bin ID (e.g. `BIN004`) into search → list narrows live,
       count updates, no button press needed.
 - [ ] Change the Ward dropdown → list narrows, count updates.
@@ -21,6 +21,7 @@ result noted so you know what "correct" looks like.
 | Normal reading | BIN001 | Shows green "OK" or amber "Filling up" badge, gauge bar matches % | |
 | Missing value | BIN004 | Shows "No reading", purple "Flagged" badge, gauge shows 0 with flag note in detail view | |
 | Out-of-range value (178%) | BIN007 | Flagged badge, detail view shows the flag-note warning, NOT treated as a normal 178% fill | |
+| Out-of-range value (250%) | BIN010 | Flagged badge, sorts to the BOTTOM of the list (not the top) — this is the on-spot Change 2 test case | |
 | Stuck sensor (4× fill_pct=50) | BIN009 | Each individual reading looks "normal" on its own — note in this log that a stuck sensor is only visible by comparing consecutive `recorded_at` values by hand, which is why Task 4's smoothing logic exists on the device side | |
 
 ## 3. Offline / local behaviour
@@ -42,3 +43,12 @@ and confirm they match: ____________
       match your search or filters." appears, table disappears.
 - [ ] Error: rename `data.json` temporarily and reload → error message
       appears, page never left blank. Rename it back afterward.
+
+## 6. On-spot changes (Level 2, see `ONSPOT-CHANGES.md` for full detail)
+- [ ] **Change 1 — threshold:** `BIN002`, `BIN004` (75%) and `BIN008` (76%)
+      show a red "Needs collection" badge, not amber — confirms
+      `CRITICAL_THRESHOLD` is now 75, not 85.
+- [ ] **Change 2 — broken sensor:** search `BIN010` → badge reads
+      "Flagged (Implausible 250%)". Clear the search → `BIN010`'s 250%
+      reading sits near the bottom of the sorted list, not the top —
+      confirms the fault is no longer causing a false alarm.

@@ -8,6 +8,15 @@
 let allReadings = [];   // full dataset, loaded once
 let currentView = "list";
 
+// ---------- Tunable thresholds ----------
+// ON-SPOT CHANGE 1: the "needs collection" threshold was 85%. The supervisor
+// decided trucks take too long to arrive, so bins should be flagged earlier.
+// Changed 85 -> 75. This one number is now the single place that controls
+// when a bin turns "critical" everywhere in the app (badge, gauge colour,
+// sort order, and the status filter dropdown all read from it).
+const CRITICAL_THRESHOLD = 75; // was 85
+const WARNING_THRESHOLD  = 60; // unchanged
+
 // ---------- DOM references ----------
 const searchInput   = document.getElementById("search-input");
 const wardFilter     = document.getElementById("ward-filter");
@@ -77,9 +86,22 @@ function classify(reading) {
   if (fill < 0 || fill > 100) {
     return { key: "flagged", label: "Implausible (" + fill + "%)" };
   }
-  if (fill >= 85) return { key: "critical", label: "Needs collection" };
-  if (fill >= 60) return { key: "warning", label: "Filling up" };
+  if (fill >= CRITICAL_THRESHOLD) return { key: "critical", label: "Needs collection" };
+  if (fill >= WARNING_THRESHOLD) return { key: "warning", label: "Filling up" };
   return { key: "ok", label: "OK" };
+}
+
+// ---------- Sorting priority ----------
+// ON-SPOT CHANGE 2: a broken sensor reporting an impossible value (e.g. 178%)
+// used to sort straight to the TOP of the list, because 178 is numerically
+// bigger than every real fill_pct — the exact false alarm the assessment
+// asks us to prevent. Now, anything classify() has flagged (missing OR
+// out-of-range) is treated as a FAULT, not a real measurement, and is
+// pushed to the bottom of the urgency ranking instead.
+function sortPriority(reading) {
+  const status = classify(reading);
+  if (status.key === "flagged") return -1; // fault, never "most urgent"
+  return reading.fill_pct;
 }
 
 // ---------- Filtering ----------
@@ -122,7 +144,7 @@ function renderList() {
   binsTbody.innerHTML = "";
   filtered
     .slice()
-    .sort((a, b) => (b.fill_pct ?? -1) - (a.fill_pct ?? -1)) // most urgent first
+    .sort((a, b) => sortPriority(b) - sortPriority(a)) // most urgent first
     .forEach(r => {
       const status = classify(r);
       const tr = document.createElement("tr");
